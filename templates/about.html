@@ -1,0 +1,297 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body{
+            scroll-behavior:smooth;
+        }
+        ul {
+            margin: 5px;
+            box-sizing: border-box;
+            border-style: solid;
+            border-radius: 1px;
+            border-width: 0.5px;
+            border-color: rgb(173, 143, 143);
+            background-color: rgb(255, 255, 253);
+            text-align: center;
+            box-shadow: rgb(173, 143, 143) 0px 0px 10px;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li a {
+
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 20px;
+            color: rgb(60, 3, 3);
+            font-size: 20px;
+            font-family: forte;
+        }
+
+        li a:hover {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 20px;
+            background-color: rgb(60, 3, 3);
+            color: rgb(255, 255, 255);
+            font-family: forte;
+        }
+
+        .content {
+            margin-top: 20px;
+            box-sizing: border-box;
+            border: 0.5px;
+            display: flex;
+            border-style: solid;
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-left: 40px;
+            text-align: center;
+            box-shadow: rgb(173, 143, 143) 0px 0px 10px;
+        }
+
+        .image {
+            box-shadow: rgb(173, 143, 143) 0px 0px 10px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .text {
+            margin-top: 5px;
+            font-family: arial;
+            padding-left: 80px;
+        }
+
+        .paragraph {
+            font-size: 15px;
+            font-family: calibri;
+        }
+
+        .projects {
+            color: rgb(60, 3, 3);
+            font-family: arial;
+        }
+
+        .aboutus {
+            font-family: forte;
+            color: rgb(60, 3, 3);
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .p1 {
+            text-align: center;
+            font-family: arial;
+            font-size: 15px;
+        }
+
+        .contact {
+            display: inline-block;
+        }
+
+        footer {
+            margin-top: 35px;
+            font-family: arial;
+            width: 100%;
+            background-color: rgb(60, 3, 3);
+            color: white;
+        }
+
+        footer .footer_main {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer .footer_main .tag {
+            margin: 10px 0;
+        }
+
+        footer .footer_main .tag img {
+            width: 80px;
+            margin-bottom: 5px;
+        }
+
+        footer .footer_main .tag p {
+            width: 250px;
+            line-height: 22px;
+            text-align: justify;
+            color: white;
+        }
+
+        footer .footer_main .tag h1 {
+            font-size: 25px;
+            margin: 25px 0;
+            color: #ffffff;
+        }
+
+        footer .footer_main .tag a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        footer .footer_main .tag .search_bar {
+            width: 230px;
+            height: 30px;
+            background-color: rgba(202, 202, 202);
+            border-radius: 25px;
+        }
+
+        footer .footer_main .tag .search_bar input {
+            width: 200px;
+            padding: 2px 0;
+            position: relative;
+            top: 17%;
+            left: 6%;
+            border: none;
+            outline: none;
+            font-size: 13px;
+            background: none;
+        }
+
+
+        footer .footer_main .tag .search_bar button {
+            padding: 7px 15px;
+            background: #089da1;
+            border: none;
+            margin: 15px;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer .end {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            color: rgb(255, 251, 251);
+        }
+
+        footer .end span {
+            color: #089da1;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="/store/">Home</a>
+            </li>
+            <li>
+                <a href="/store/bookstore">BookStore</a>
+            </li>
+            <li>
+                <a href="/store/services">Services</a>
+            </li>
+            <li>
+                <a href="/store/contact">Contact</a>
+            </li>
+            <li>
+                <a href="/store/about">About</a>
+            </li>
+        </ul>
+    </div>
+
+    <h1 class="aboutus">About Us</h1>
+    <p class="p1">This team Minauly work for general peropse,national profitable works such this bookstore and more
+        material such as leaning app <br>
+        which can be use in both machine Android and IOS make pacility to jobless people to have best income in each
+        side
+        of corner and can handle the life machine
+        <br>in other sevice which we do that is free these app and templates are completly free for afghans peoples.
+        <br>
+        Eng.Elhamuddin Mayar
+    </p>
+
+    <div class="content">
+
+
+        <img class="image" src={% static "image/mayar1.png"%} height="300px">
+        <div class="text">
+            <h1 class="projects">Projects</h1>
+            <p class="paragraph">Since 2020 there are more pacilities that are made by mayar team as present
+                <br>Founder of Mayar Team Mr.Elhamuddin Mayar are one Who payed attention<br>
+                on this part gradully and focus about the best content to assume and slove the puzzles.
+                <br>
+                <br>
+                <b>&</b>
+                <br>
+                <b><br>1:Mayar Online Store (2022-jun-12 )<br>2:School Managment System (2023-1-2)<br> 3:Ticket Control
+                    System (2024-412)<br>4:Mayar Online BookStore (2024-4-1) </b>
+
+            </p>
+
+        </div>
+
+
+        <img class="image1" src={% static "image/pic6.png"%} height="300px">
+    </div>
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <img src={% static "image/mayar.png "%}>
+                <p>necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
+                    Latin words, combined
+                    with a handful.</p> 
+            </div>
+
+            <div class="tag">
+                <h1>Quick Link</h1>
+                <a href="/store/">Home</a>
+                <a href="/store/bookstore">BookStore</a>
+                <a href="/store/services">Services</a>
+                <a href="/store/contact">Contact</a>
+                <a href="/store/about">About</a>
+
+            </div>
+
+            <div class="tag">
+                <h1>Contact Info</h1>
+                <a href="#">Ph: 0093785678006</a>
+                <a href="#">Ph: 0093765722860</a>
+                <a href="#">E-m: elhamuddinmayar@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1 class="follow">Follow Us</h1>
+                <div class="social_links">
+                    <a href="">Facebook</a>
+                    <a href="">Instgram</a>
+                    <a href="">Twitter</a>
+                    <a href="">Linked In</a>
+
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>News Letter</h1>
+                <div class="search_bar">
+                    <input type="text " placeholder="Your email is here">
+                    <button type="submit">Subscribe</button>
+
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <p class="end">© 2024 All Rights Reserved By Mayar</p>
+
+    </footer>
+</body>
+
+</html>

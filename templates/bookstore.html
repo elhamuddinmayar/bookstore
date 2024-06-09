@@ -1,0 +1,368 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    
+    <style>
+        body{
+            scroll-behavior:smooth;
+        }
+        ul {
+            margin: 5px;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 0.5px;
+            border-radius: 2px;
+            border-color: rgb(235, 228, 211);
+            list-style-type: none;
+            background-color: rgb(255, 255, 253);
+            padding: 0px;
+            text-align: center;
+            box-shadow: rgb(173, 143, 143) 0px 0px 10px;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 20px;
+            color: rgb(60, 3, 3);
+            font-size: 20px;
+            font-family: forte;
+        }
+
+        li a:hover {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 20px;
+
+            background-color: rgb(60, 3, 3);
+            color: rgb(255, 255, 255);
+        }
+
+        .content {
+            padding-left: 45px;
+            box-sizing: border-box;
+            border: 2px;
+            border-style: solid;
+            border-color:purple;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .div1 {
+            box-sizing: border-box;
+            border-radius: 2px;
+            height: 360px;
+            width: 286px;
+            padding-top: 20px;
+            margin: 5px;
+            box-shadow: rgb(173, 143, 143) 0px 0px 10px;
+        }
+
+        .title {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-family: arial;
+            font-size: 25px;
+        }
+
+
+        .price {
+            margin-top: 10px;
+            font-family: arial;
+            font-size: 20px;
+        }
+
+        .name {
+            margin: 0;
+            font-family: arial;
+        }
+
+        .department {
+            margin-top: 60px;
+            color: rgb(19, 4, 42);
+            font-family: algerian;
+            text-align: center;
+        }
+        footer {
+            margin-top: 35px;
+            font-family: arial;
+            width: 100%;
+            background-color: rgb(60, 3, 3);
+            color: white;
+        }
+
+        footer .footer_main {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer .footer_main .tag {
+            margin: 10px 0;
+        }
+
+        footer .footer_main .tag img {
+            width: 80px;
+            margin-bottom: 5px;
+        }
+
+        footer .footer_main .tag p {
+            width: 250px;
+            line-height: 22px;
+            text-align: justify;
+            color: white;
+        }
+
+        footer .footer_main .tag h1 {
+            font-size: 25px;
+            margin: 25px 0;
+            color: #ffffff;
+        }
+
+        footer .footer_main .tag a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        footer .footer_main .tag .search_bar {
+            width: 230px;
+            height: 30px;
+            background-color: rgba(202, 202, 202);
+            border-radius: 25px;
+        }
+
+        footer .footer_main .tag .search_bar input {
+            width: 200px;
+            padding: 2px 0;
+            position: relative;
+            top: 17%;
+            left: 6%;
+            border: none;
+            outline: none;
+            font-size: 13px;
+            background: none;
+        }
+
+        footer .footer_main .tag .search_bar button {
+            padding: 7px 15px;
+            background: #089da1;
+            border: none;
+            margin: 15px;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer .end {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            color: rgb(255, 251, 251);
+        }
+
+        footer .end span {
+            color: #089da1;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="/store">Home</a>
+            </li>
+            <li>
+                <a href="/store/bookstore">BookStore</a>
+            </li>
+            <li>
+                <a href="/store/services">Services</a>
+            </li>
+            <li>
+                <a href="/store/contact">Contact</a>
+            </li>
+            <li>
+                <a href="/store/about">About</a>
+            </li>
+        </ul>
+    </div>
+    <h1 class="department">Computer Deparment</h1>
+    <div class="content">
+        {% for com in computer %}
+        <div class="div1">
+            <img src="{{com.img.url}}"  height="220px">
+            <h1 class="title">{{com.title}}</h1>
+            <p class="name">{{com.author}}</p>
+            <p class="price">{{com.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Islamic Deparment</h1>
+    <div class="content">
+        {% for isl in islamic %}
+        <div class="div1">
+            <img src="{{isl.img.url}}"  height="220px">
+            <h1 class="title">{{isl.title}}</h1>
+            <p class="name">{{isl.author}}</p>
+            <p class="price">{{isl.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Fictional Deparment</h1>
+    <div class="content">
+        {% for fic in fictional %}
+        <div class="div1">
+            <img src="{{fic.img.url}}"  height="220px">
+            <h1 class="title">{{fic.title}}</h1>
+            <p class="name">{{fic.author}}</p>
+            <p class="price">{{fic.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Historical Deparment</h1>
+    <div class="content">
+        {% for his in islamic %}
+        <div class="div1">
+            <img src="{{his.img.url}}"  height="220px">
+            <h1 class="title">{{his.title}}</h1>
+            <p class="name">{{his.author}}</p>
+            <p class="price">{{his.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Litrary Deparment</h1>
+    <div class="content">
+        {% for lit in litrary %}
+        <div class="div1">
+            <img src="{{lit.img.url}}"  height="220px">
+            <h1 class="title">{{lit.title}}</h1>
+            <p class="name">{{lit.author}}</p>
+            <p class="price">{{lit.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Coding Deparment</h1>
+    <div class="content">
+        {% for cod in coding %}
+        <div class="div1">
+            <img src="{{cod.img.url}}"  height="220px">
+            <h1 class="title">{{cod.title}}</h1>
+            <p class="name">{{cod.author}}</p>
+            <p class="price">{{cod.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Art Deparment</h1>
+    <div class="content">
+        {% for art in art %}
+        <div class="div1">
+            <img src="{{art.img.url}}"  height="220px">
+            <h1 class="title">{{art.title}}</h1>
+            <p class="name">{{art.author}}</p>
+            <p class="price">{{art.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Medical Deparment</h1>
+    <div class="content">
+        {% for med in medical %}
+        <div class="div1">
+            <img src="{{med.img.url}}"  height="220px">
+            <h1 class="title">{{med.title}}</h1>
+            <p class="name">{{med.author}}</p>
+            <p class="price">{{med.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Science Deparment</h1>
+    <div class="content">
+        {% for scs in science %}
+        <div class="div1">
+            <img src="{{scs.img.url}}"  height="220px">
+            <h1 class="title">{{scs.title}}</h1>
+            <p class="name">{{scs.author}}</p>
+            <p class="price">{{scs.price}} Afg</p>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="department">Politics Deparment</h1>
+    <div class="content">
+        {% for pol in politics %}
+        <div class="div1">
+            <img src="{{pol.img.url}}"  height="220px">
+            <h1 class="title">{{pol.title}}</h1>
+            <p class="name">{{pol.author}}</p>
+            <p class="price">{{pol.price}} Afg</p>
+        </div>
+       {% endfor %}
+    </div>
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <img src={% static "image/mayar.png"%}>
+                <p>necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
+                    Latin words, combined
+                    with a handful.</p>
+            </div>
+
+            <div class="tag">
+                <h1>Quick Link</h1>
+                <a href="/store/">Home</a>
+                <a href="/store/bookstore">BookStore</a>
+                <a href="/store/services">Services</a>
+                <a href="/store/contact">Contact</a>
+                <a href="/store/about">About</a>
+
+            </div>
+
+            <div class="tag">
+                <h1>Contact Info</h1>
+                <a href="#">Ph: 0093785678006</a>
+                <a href="#">Ph: 0093765722860</a>
+                <a href="#">E-m: elhamuddinmayar@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1 class="follow">Follow Us</h1>
+                <div class="social_links">
+                    <a href="">Facebook</a>
+                    <a href="">Instgram</a>
+                    <a href="">Twitter</a>
+                    <a href="">Linked In</a>
+
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>News Letter</h1>
+                <div class="search_bar">
+                    <input type="text " placeholder="Your email is here">
+                    <button type="submit">Subscribe</button>
+
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <p class="end">© 2024 All Rights Reserved By Mayar</p>
+    </footer>
+
+
+</body>
+
+</html>
